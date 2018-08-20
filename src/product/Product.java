@@ -1,32 +1,42 @@
 package product;
+
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+
 public class Product {
-    private String name;
-    private int cuantity;
-    private float price;
-    private boolean bought= false;
+    SimpleStringProperty name;
+    SimpleIntegerProperty cuantity;
+    SimpleDoubleProperty price;
+    SimpleBooleanProperty bought=new SimpleBooleanProperty(false);
 
     public String getName() {
-        return name;
+        return this.name.get();
     }
 
     public int getCuantity() {
-        return cuantity;
+        return this.cuantity.get();
     }
 
-    public float getPrice() {
-        return price;
+    public double getPrice() {
+        return this.price.get();
     }
 
-    public boolean isBought() {
-        return bought;
+    public boolean getBought() {
+        return this.bought.get();
     }
     public void buyItem(){
-        this.bought=true;
+        this.bought.set(true);
     }
 
     public Product(String name, int cuantity, float price) {
-        this.name = name;
-        this.cuantity = cuantity;
-        this.price = price;
+        this.name = new SimpleStringProperty();
+        this.cuantity = new SimpleIntegerProperty();
+        this.price = new SimpleDoubleProperty();
+
+        this.name.set(name);
+        this.cuantity.set(cuantity);
+        this.price.set(price);
     }
 }
