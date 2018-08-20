@@ -1,5 +1,6 @@
+package lists;
 import java.util.ArrayList;
-
+import product.*;
 public class List {
     private String name;
     private String date;
@@ -20,7 +21,7 @@ public class List {
     }
     public boolean findProduct(String name){
         for (Product product : this.products){
-            if(product.getName()==name){
+            if(product.getName().equals(name)){
                 return true;
             }
         }
