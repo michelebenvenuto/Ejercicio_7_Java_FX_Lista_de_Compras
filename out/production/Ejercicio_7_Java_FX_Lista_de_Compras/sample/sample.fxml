@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -12,14 +13,17 @@
       <ColumnConstraints />
       <ColumnConstraints />
       <ColumnConstraints />
+      <ColumnConstraints />
    </columnConstraints>
    <rowConstraints>
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
    </rowConstraints>
    <children>
-      <TableView fx:id="listsTable" prefHeight="200.0" prefWidth="303.0" GridPane.columnIndex="1">
+      <TableView fx:id="listsTable" prefHeight="200.0" prefWidth="302.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
         <columns>
           <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Nombre" />
           <TableColumn fx:id="dateColumn" prefWidth="75.0" text="Fecha" />
@@ -27,5 +31,6 @@
             <TableColumn fx:id="estimateColumn" prefWidth="75.0" text="Estimado" />
         </columns>
       </TableView>
+      <Button fx:id="addListButton" mnemonicParsing="false" onAction="#addList" text="Agregar Lista" GridPane.columnIndex="2" GridPane.rowIndex="1" />
    </children>
 </GridPane>
