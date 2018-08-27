@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddlistControler">
+   <children>
+      <Label layoutX="61.0" layoutY="59.0" prefHeight="25.0" prefWidth="50.0" text="Nombre" />
+      <TextArea layoutX="120.0" layoutY="53.0" prefHeight="0.0" prefWidth="200.0" />
+      <TextArea layoutX="61.0" layoutY="143.0" prefHeight="200.0" prefWidth="463.0" />
+      <Label layoutX="61.0" layoutY="118.0" prefHeight="25.0" prefWidth="99.0" text="Descripcion" />
+   </children>
+</AnchorPane>

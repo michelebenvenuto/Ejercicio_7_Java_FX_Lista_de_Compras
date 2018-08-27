@@ -8,4 +8,6 @@ public class AddlistControler {
 
     @FXML
     javafx.scene.control.TextField nameInput;
+
+
 }

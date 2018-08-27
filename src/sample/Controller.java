@@ -50,11 +50,10 @@ public class Controller {
     public void addList(ActionEvent event){
         Parent root;
         try{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("addList.fxml"));
-            root=loader.load();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AddList.fxml"));
+            root = loader.load();
             Stage stage = new Stage();
-            stage.setTitle("Agregar una nueva lista");
-            stage.setScene(new Scene(root, 450,450));
+            stage.setScene(new Scene(root));
             stage.show();
         }catch (IOException e){
             e.printStackTrace();

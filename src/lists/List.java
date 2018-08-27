@@ -22,6 +22,7 @@ public class List {
 
         this.name.set(name);
         this.date.set(date);
+        this.products= new ArrayList<>();
     }
 
     public boolean findProduct(String name){
