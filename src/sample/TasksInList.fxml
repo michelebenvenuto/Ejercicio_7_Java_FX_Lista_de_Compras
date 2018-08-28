@@ -15,17 +15,17 @@
             <Font size="40.0" />
          </font></Label>
       <TextArea layoutX="47.0" layoutY="81.0" prefHeight="75.0" prefWidth="479.0" />
-      <Button layoutX="441.0" layoutY="41.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="441.0" layoutY="41.0" mnemonicParsing="false" text="Agregar Producto" />
       <TableView layoutX="47.0" layoutY="173.0" prefHeight="200.0" prefWidth="479.0">
         <columns>
           <TableColumn prefWidth="110.0" text="Nombre" />
           <TableColumn prefWidth="71.0" text="Cantidad" />
-            <TableColumn prefWidth="82.0" text="Precio Unitario" />
-            <TableColumn prefWidth="91.0" text="Column X" />
-            <TableColumn prefWidth="124.0" text="Column X" />
+            <TableColumn prefWidth="100.0" text="Precio Unitario" />
+            <TableColumn prefWidth="84.0" text="Total" />
+            <TableColumn prefWidth="113.0" text="Estado" />
         </columns>
       </TableView>
-      <Button layoutX="415.0" layoutY="382.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="52.0" text="Button" />
-      <Button layoutX="475.0" layoutY="382.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="332.0" layoutY="382.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Pendiente" />
+      <Button layoutX="419.0" layoutY="382.0" mnemonicParsing="false" text="Marcar Comprado" />
    </children>
 </AnchorPane>
