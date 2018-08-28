@@ -43,7 +43,7 @@
       <Button fx:id="addListButton" mnemonicParsing="false" onAction="#addList" prefHeight="29.0" prefWidth="94.0" text="Agregar Lista" GridPane.columnIndex="6" GridPane.rowIndex="2" />
       <Label prefHeight="37.0" prefWidth="106.0" text="Mis Listas" GridPane.columnIndex="6">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="22.0" />
          </font>
       </Label>
       <Button fx:id="editButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Editar Lista" GridPane.columnIndex="6" GridPane.rowIndex="4" />

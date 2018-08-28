@@ -40,17 +40,17 @@ public class AddlistControler {
         listas= lista;
     }
     public void create(javafx.event.ActionEvent event) {
-        List listToAdd= new List(nameInput.getText(),descriptionInput.getText(),dateInput.getText());
-        listas.add(listToAdd);
-        Parent root;
-        try{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("AddList.fxml"));
-            root = loader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        }catch (IOException e){
-            e.printStackTrace();
+            List listToAdd = new List(nameInput.getText(), descriptionInput.getText(), dateInput.getText());
+            listas.add(listToAdd);
+            Parent root;
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("TasksInList.fxml"));
+                root = loader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-    }
 }
