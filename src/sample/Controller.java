@@ -14,11 +14,18 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class Controller {
     @FXML
     Button addListButton;
+
+    @FXML
+    Button eliminateButton;
+
+    @FXML
+    Button editButton;
     @FXML
     TableView<List> listsTable;
 
@@ -54,9 +61,17 @@ public class Controller {
             root = loader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
+            //Mandar lista
+            AddlistControler addlistControler =loader.getController();
+            ObservableList<List> listas = listsTable.getItems();
+            AddlistControler.setListas(listas);
             stage.show();
         }catch (IOException e){
             e.printStackTrace();
         }
+    }
+    public void eliminateList(ActionEvent event){
+        List selectedList= listsTable.getSelectionModel().getSelectedItem();
+        listas.remove(selectedList);
     }
 }
