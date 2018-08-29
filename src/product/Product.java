@@ -30,7 +30,7 @@ public class Product {
         this.bought.set(true);
     }
 
-    public Product(String name, int cuantity, float price) {
+    public Product(String name, int cuantity, double price) {
         this.name = new SimpleStringProperty();
         this.cuantity = new SimpleIntegerProperty();
         this.price = new SimpleDoubleProperty();

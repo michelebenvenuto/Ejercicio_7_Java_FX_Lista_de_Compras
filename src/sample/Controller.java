@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import lists.List;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
+import product.Product;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -73,5 +74,29 @@ public class Controller {
     public void eliminateList(ActionEvent event){
         List selectedList= listsTable.getSelectionModel().getSelectedItem();
         listas.remove(selectedList);
+    }
+    public void edditList(ActionEvent event){
+        Parent root;
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("TasksInList.fxml"));
+            root = loader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            //Mandar Lista seleccionada
+            TasksInListController tasksInListController =loader.getController();
+            List selectedList = listsTable.getSelectionModel().getSelectedItem();
+            if (selectedList != null){
+                tasksInListController.listWorkingOn=selectedList;
+                tasksInListController.setName(selectedList.getName());
+                tasksInListController.setDescription(selectedList.getDescription());
+                tasksInListController.nameColumn.setCellValueFactory(new PropertyValueFactory<Product, String >("name"));
+                tasksInListController.cuantityColumn.setCellValueFactory(new PropertyValueFactory<Product, Integer>("cuantity"));
+                tasksInListController.stateColumn.setCellValueFactory(new PropertyValueFactory<Product, Boolean>("bought"));
+            }
+
+            stage.show();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }

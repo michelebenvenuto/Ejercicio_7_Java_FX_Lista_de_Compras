@@ -30,22 +30,7 @@ public class List {
         this.date.set(date);
         this.products= new ArrayList<>();
     }
-
-    public boolean findProduct(String name){
-        for (Product product : this.products){
-            if(product.getName().equals(name)){
-                return true;
-            }
-        }
-        return false;
-    }
-    public boolean addProduct(Product product){
-        if(findProduct(product.getName())){
-            return false;
-        }
-        else{
-            this.products.add(product);
-            return true;
-        }
+    public void addProduct(Product productToAdd) {
+        this.products.add(productToAdd);
     }
 }
