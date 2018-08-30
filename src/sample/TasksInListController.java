@@ -20,7 +20,7 @@ import java.awt.*;
 import java.io.IOException;
 
 public class TasksInListController {
-
+    static List listWorkingOn;
     @FXML
     Label listNameLabel;
 
@@ -31,7 +31,7 @@ public class TasksInListController {
     TextArea descriptionArea;
 
     @FXML
-    TableView productTable;
+    TableView<Product> productTable;
 
     @FXML
     TableColumn nameColumn;
@@ -48,7 +48,6 @@ public class TasksInListController {
     @FXML
     TableColumn stateColumn;
 
-    List listWorkingOn;
     public void setName(String name){
         this.listNameLabel.setText(name);
     }
@@ -62,14 +61,10 @@ public class TasksInListController {
             root = loader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            AddProductController.listWorkingOn = listWorkingOn;
             stage.show();
         }catch (IOException e){
             e.printStackTrace();
         }
 
     }
-
-
-
 }

@@ -58,6 +58,8 @@ public class AddlistControler {
                 tasksInListController.nameColumn.setCellValueFactory(new PropertyValueFactory<Product, String >("name"));
                 tasksInListController.cuantityColumn.setCellValueFactory(new PropertyValueFactory<Product, Integer>("cuantity"));
                 tasksInListController.stateColumn.setCellValueFactory(new PropertyValueFactory<Product, Boolean>("bought"));
+                tasksInListController.listWorkingOn= listToAdd;
+
             } catch (IOException e) {
                 e.printStackTrace();
             }

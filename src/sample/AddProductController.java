@@ -20,10 +20,9 @@ public class AddProductController {
     @FXML
     javafx.scene.control.Button addButton;
 
-    static List listWorkingOn;
 
     public void addItem(ActionEvent event){
         Product productToAdd= new Product(nameInput.getText(),Integer.valueOf(cuantityInput.getText()),Double.valueOf(priceInput.getText()));
-        listWorkingOn.addProduct(productToAdd);
+        TasksInListController.listWorkingOn.addProduct(productToAdd);
     }
 }
