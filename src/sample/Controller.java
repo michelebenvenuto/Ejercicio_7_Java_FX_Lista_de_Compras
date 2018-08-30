@@ -41,7 +41,7 @@ public class Controller {
 
     @FXML
     TableColumn estimateColumn;
-
+    //Esta lista contiene todas las listas de compras
     ObservableList<List> listas =FXCollections.observableArrayList();
 
     public void initialize(){
@@ -54,7 +54,7 @@ public class Controller {
         );
         listsTable.setItems(listas);
     }
-
+    //Envia a la pantalla donde se piden los datos
     public void addList(ActionEvent event){
         Parent root;
         try{
@@ -71,10 +71,12 @@ public class Controller {
             e.printStackTrace();
         }
     }
+    //Boton eliminar
     public void eliminateList(ActionEvent event){
         List selectedList= listsTable.getSelectionModel().getSelectedItem();
         listas.remove(selectedList);
     }
+    //Funcionamiento del boton editar
     public void edditList(ActionEvent event){
         Parent root;
         try{

@@ -33,14 +33,14 @@ public class AddlistControler {
     @FXML
     javafx.scene.control.TextField dateInput;
 
-
-
-
+    //Lista enviadada desde Controller en esta se guardan las listas
     static ObservableList<List> listas =FXCollections.observableArrayList();
 
     public static void setListas(ObservableList<List> lista){
         listas= lista;
     }
+
+    //Funcionameinto del boton crear
     public void create(javafx.event.ActionEvent event) {
             List listToAdd = new List(nameInput.getText(), descriptionInput.getText(), dateInput.getText());
             listas.add(listToAdd);

@@ -20,6 +20,7 @@ import java.awt.*;
 import java.io.IOException;
 
 public class TasksInListController {
+    //Lista de compras enviada desde Controller o de AddListController
     static List listWorkingOn;
     @FXML
     Label listNameLabel;
@@ -47,13 +48,15 @@ public class TasksInListController {
 
     @FXML
     TableColumn stateColumn;
-
+    //Pone el nombre a label
     public void setName(String name){
         this.listNameLabel.setText(name);
     }
+    //Pone el texto de la descripcion
     public void setDescription(String description){
         this.descriptionArea.setText(description);
     }
+    //Envia a la pantalla de agregar productos
     public void addProduct(ActionEvent event){
         Parent root;
         try{

@@ -20,7 +20,7 @@ public class AddProductController {
     @FXML
     javafx.scene.control.Button addButton;
 
-
+    //En teoria deberia agregar el producto a la lista
     public void addItem(ActionEvent event){
         Product productToAdd= new Product(nameInput.getText(),Integer.valueOf(cuantityInput.getText()),Double.valueOf(priceInput.getText()));
         TasksInListController.listWorkingOn.addProduct(productToAdd);
